@@ -49,13 +49,19 @@ resource "aws_security_group" "main" {
 }
 
 resource "aws_instance" "app_server" {
-  ami                         = "ami-0c55b159cbfafe1f0"
+  ami                         = "ami-053b0d53c279acc90"
   instance_type               = "t2.micro"
   subnet_id                   = aws_subnet.main.id
   vpc_security_group_ids      = [aws_security_group.main.id]
 
   tags = {
-    Name = "MyAppServer"
+    Name = "UbuntuAppServer"
+  }
+}
+
+
+  tags = {
+    Name = "AppServer"
   }
 }
 

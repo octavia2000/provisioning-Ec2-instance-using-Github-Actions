@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-2"
+  region = "us-east-1"
 }
 
 data "aws_vpc" "default" {
@@ -17,8 +17,8 @@ data "aws_subnet" "default" {
     values = ["true"]
   }
 
-  # You can also specify AZ if you want, like "us-east-2a"
-  availability_zone = "us-east-2a"
+  # You can also specify AZ if you want, like "us-east-1a"
+  availability_zone = "us-east-1a"
 }
 
 variable "ec2_name" {

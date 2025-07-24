@@ -28,9 +28,12 @@ variable "ec2_name" {
 }
 
 resource "aws_security_group" "main" {
-  name        = "allow_ssh_default_vpc"
+  name        = "allow_ssh_default_vpc_2"  # use a unique name
   description = "Allow SSH"
   vpc_id      = data.aws_vpc.default.id
+  # rest of the config...
+}
+
 
   ingress {
     from_port   = 22
